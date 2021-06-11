@@ -332,6 +332,49 @@
         <?php } ?>
             <!-- Purchase menu end -->  
 
+
+  <!-- Un Processed Menu Start -->
+  <?php if($this->permission1->method('add_quotation','create')->access() || $this->permission1->method('manage_quotation','read')->access()){?>
+            <li class="treeview <?php
+            if ($this->uri->segment('1') == ("add_assortment") || $this->uri->segment('1') == ("manage_assortment") || $this->uri->segment('1') == ("stock_allocation")) {
+                echo "active";
+            } else {
+                echo " ";
+            }
+            ?>">
+                <a href="#">
+                    <i class="fa fa-book"></i><span><?php echo display('unprocessed') ?></span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+            <?php if($this->permission1->method('add_quotation','create')->access()){ ?>
+                    <li class="treeview <?php if ($this->uri->segment('1') == ("add_assortment")){
+                        echo "active";
+                    } else {
+                        echo " ";
+                    }?>"><a href="<?php echo base_url('add_assortment') ?>"><?php echo display('assortment_form') ?></a></li>
+                <?php }?>
+                <?php if($this->permission1->method('manage_quotation','read')->access()){ ?>
+                    <li class="treeview <?php if ($this->uri->segment('1') == ("manage_assortment")){
+                        echo "active";
+                    } else {
+                        echo " ";
+                    }?>"><a href="<?php echo base_url('manage_assortment') ?>"><?php echo display('manage_assortment') ?></a></li>
+                <?php } ?>
+
+                <?php if($this->permission1->method('manage_quotation','read')->access()){ ?>
+                    <li class="treeview <?php if ($this->uri->segment('1') == ("stock_allocation")){
+                        echo "active";
+                    } else {
+                        echo " ";
+                    }?>"><a href="<?php echo base_url('stock_allocation') ?>"><?php echo display('stock_allocation') ?></a></li>
+                <?php } ?>
+                </ul>
+            </li>
+        <?php }?>
+            <!-- Un Processed Menu end -->
         
 
       <!-- Stock menu start -->

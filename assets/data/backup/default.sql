@@ -777,7 +777,7 @@ INSERT INTO `language` (`id`, `phrase`, `english`, `bangla`) VALUES
 (318, 'billing_date', 'Billing Date', NULL),
 (319, 'billing_to', 'Billing To', NULL),
 (320, 'billing_from', 'Billing From', NULL),
-(321, 'you_cant_delete_this_product', 'Sorry !!  You can\'t delete this product.This product already used in calculation system!', NULL),
+(321, 'you_cant_delete_this_product', 'Sorry !!  You cant delete this product.This product already used in calculation system!', NULL),
 (322, 'old_customer', 'Old Customer', NULL),
 (323, 'new_customer', 'New Customer', NULL),
 (324, 'new_supplier', 'New Supplier', NULL),
@@ -1347,7 +1347,7 @@ INSERT INTO `language` (`id`, `phrase`, `english`, `bangla`) VALUES
 (888, 'do_you_want_to_print', 'Do You Want to Print', NULL),
 (889, 'yes', 'Yes', NULL),
 (890, 'no', 'No', NULL),
-(891, 'todays_sale', 'Today\'s Sales', NULL),
+(891, 'todays_sale', 'Todays Sales', NULL),
 (892, 'or', 'OR', NULL),
 (893, 'no_result_found', 'No Result Found', NULL),
 (894, 'add_service_quotation', 'Add Service Quotation', NULL),
@@ -1431,9 +1431,19 @@ INSERT INTO `language` (`id`, `phrase`, `english`, `bangla`) VALUES
 (972, 'generate_qr', 'Generate QR', NULL),
 (973, 'latestv', 'Latest Version', 'current_version'),
 (974, 'Current Version', NULL, NULL),
-(976, 'notesupdate', 'Note: If you want to update software,you Must have immediate previous version', NULL);
-
-
+(976, 'notesupdate', 'Note: If you want to update software,you Must have immediate previous version', NULL),
+(977, 'assortment_form', 'Assortment Form', NULL),
+(978, 'manage_assortment', 'Manage Assortment', NULL),
+(979, 'assortment_details', 'Assortment Details', NULL),
+(980, 'unprocessed', 'Un Processed', NULL),
+(981, 'stock_allocation', 'Stock Allocation', NULL),
+(982, 'assortment_date', 'Assortment Date', NULL),
+(983, 'fiber', 'Fiber', NULL),
+(984, 'green', 'Green', NULL),
+(985, 'green_fiber', 'Green Fiber', NULL),
+(986, 'caps', 'Caps', NULL),
+(987, 'mix_plastic', 'Mix Plastic', NULL),
+(988, 'net_weight', 'Net Weight', NULL);
 
 
 -- --------------------------------------------------------

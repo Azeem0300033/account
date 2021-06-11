@@ -1,0 +1,13 @@
+#ignore database file
+application/config/database.php
+
+#ignore cache folder file
+application/cache/*
+
+#ignore backup file
+assets/data/outgoing/backup.sql
+
+#ignore backup file
+assets/img/*
+application/config/database.php
+assets/data/outgoing/backup.sql
