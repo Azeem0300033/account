@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS `acc_coa` (
 --
 
 INSERT INTO `acc_coa` (`HeadCode`, `HeadName`, `PHeadName`, `HeadLevel`, `IsActive`, `IsTransaction`, `IsGL`, `HeadType`, `IsBudget`, `IsDepreciation`, `customer_id`, `supplier_id`, `service_id`, `DepreciationRate`, `CreateBy`, `CreateDate`, `UpdateBy`, `UpdateDate`) VALUES
-('502000001', '1-kplastic', 'Account Payable', 3, 1, 1, 0, 'L', 0, 0, NULL, 1, NULL, '0.00', '2', '2021-06-09 08:03:09', '', '0000-00-00 00:00:00'),
 ('102030000001', '1-Walking Customer', 'Customer Receivable', 4, 1, 1, 0, 'A', 0, 0, 1, NULL, NULL, '0.00', '1', '2019-11-16 08:44:42', '', '0000-00-00 00:00:00'),
 ('50202', 'Account Payable', 'Current Liabilities', 2, 1, 0, 1, 'L', 0, 0, NULL, NULL, NULL, '0.00', 'admin', '2015-10-15 19:50:43', '', '2019-09-05 00:00:00'),
 ('10203', 'Account Receivable', 'Current Asset', 2, 1, 0, 0, 'A', 0, 0, NULL, NULL, NULL, '0.00', '', '2019-09-05 00:00:00', 'admin', '2013-09-18 15:29:35'),
@@ -1444,10 +1443,7 @@ INSERT INTO `language` (`id`, `phrase`, `english`, `bangla`) VALUES
 (985, 'green_fiber', 'Green Fiber', NULL),
 (986, 'caps', 'Caps', NULL),
 (987, 'mix_plastic', 'Mix Plastic', NULL),
-(988, 'net_weight', 'Net Weight', NULL),
-(989, 'unit_2', 'Unit 2', NULL),
-(990, 'in_house_material', 'In House Material', NULL),
-(991, 'outsource_processed_material', 'Out Source Processed Material', NULL);
+(988, 'net_weight', 'Net Weight', NULL);
 
 
 -- --------------------------------------------------------
@@ -1605,8 +1601,6 @@ CREATE TABLE IF NOT EXISTS `product_category` (
   PRIMARY KEY (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `product_category` (`category_id`, `category_name`, `status`) VALUES
-(1, 'General', 1);
 
 
 --
@@ -1630,22 +1624,6 @@ CREATE TABLE IF NOT EXISTS `product_information` (
   KEY `category_id` (`category_id`),
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-INSERT INTO `product_information` (`id`, `product_id`, `category_id`, `product_name`, `price`, `unit`, `tax`, `serial_no`, `product_model`, `product_details`, `image`, `status`) VALUES
-(1, '61823709', '1', 'Kabbar', 550, '', 0, '', 'HLF-1530', '', 'my-assets/image/product.png', 1),
-(2, '82336398', '1', 'Wastage', 122, '', 0, '', 'HLF-1530', '', 'my-assets/image/product.png', 1),
-(3, '7392994892', '1', 'White Rope Grade', 100, '', 0, NULL, 'SSd-1', 'Csv Product', 'my-assets/image/product.png', 1),
-(4, '8706261323', '1', 'White Special Prime', 100, '', 0, NULL, 'SSd-2', 'Csv Product', 'my-assets/image/product.png', 1),
-(5, '3413452859', '1', 'Green Prime', 100, '', 0, NULL, 'SSd-3', 'Csv Product', 'my-assets/image/product.png', 1),
-(6, '1924221036', '1', 'Green Fiber Grade', 100, '', 0, NULL, 'SSd-4', 'Csv Product', 'my-assets/image/product.png', 1),
-(7, '3099714416', '1', 'White Fiber Grade', 100, '', 0, NULL, 'SSd-5', 'Csv Product', 'my-assets/image/product.png', 1),
-(8, '2513413383', '1', 'Caps', 100, '', 0, NULL, 'SSd-6', 'Csv Product', 'my-assets/image/product.png', 1),
-(9, '4424013385', '1', 'Mix Plastic', 100, '', 0, NULL, 'SSd-7', 'Csv Product', 'my-assets/image/product.png', 1),
-(10, '9575942698', '1', 'Stock Prime', 100, '', 0, NULL, 'SSd-8', 'Csv Product', 'my-assets/image/product.png', 1),
-(11, '6815423975', '1', 'Ring Wrapper', 100, '', 0, NULL, 'SSd-9', 'Csv Product', 'my-assets/image/product.png', 1),
-(12, '712952394', '1', 'White Un-Washed', 100, '', 0, NULL, 'SSd-10', 'Csv Product', 'my-assets/image/product.png', 1),
-(13, '8724795066', '1', 'Green Un-Washed', 100, '', 0, NULL, 'SSd-11', 'Csv Product', 'my-assets/image/product.png', 1);
-
 
 
 
@@ -2153,20 +2131,6 @@ CREATE TABLE IF NOT EXISTS `supplier_product` (
   KEY `supplier_id` (`supplier_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `supplier_product` (`supplier_pr_id`, `product_id`, `products_model`, `supplier_id`, `supplier_price`) VALUES
-(1, '61823709', 'HLF-1530', 1, 550),
-(2, '82336398', 'HLF-1530', 1, 22),
-(3, '7392994892', 'SSd-1', 1, 100),
-(4, '8706261323', 'SSd-2', 1, 100),
-(5, '3413452859', 'SSd-3', 1, 100),
-(6, '1924221036', 'SSd-4', 1, 100),
-(7, '3099714416', 'SSd-5', 1, 100),
-(8, '2513413383', 'SSd-6', 1, 100),
-(9, '4424013385', 'SSd-7', 1, 100),
-(10, '9575942698', 'SSd-8', 1, 100),
-(11, '6815423975', 'SSd-9', 1, 100),
-(12, '712952394', 'SSd-10', 1, 100),
-(13, '8724795066', 'SSd-11', 1, 100);
 
 
 --
