@@ -9,7 +9,7 @@ $user_type = $this->session->userdata('user_type');
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo display('stock_allocation') ?> </h4>
+                            <h4><?php echo display('in_house_material') ?> </h4>
                         </div>
                     </div>
                     <?php echo form_open('unprocessed/unprocessed/bdtask_insert_assortment', array('class' => 'form-vertical', 'id' => 'insert_quotation')) ?>

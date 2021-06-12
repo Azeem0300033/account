@@ -375,6 +375,42 @@
             </li>
         <?php }?>
             <!-- Un Processed Menu end -->
+
+            <!-- Processed Menu Start -->
+  <?php if($this->permission1->method('add_quotation','create')->access() || $this->permission1->method('manage_quotation','read')->access()){?>
+            <li class="treeview <?php
+            if ($this->uri->segment('1') == ("in_house_processed_material") || $this->uri->segment('1') == ("outsource_processed_material") ) {
+                echo "active";
+            } else {
+                echo " ";
+            }
+            ?>">
+                <a href="#">
+                    <i class="fa fa-book"></i><span><?php echo display('unit_2') ?></span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+            <?php if($this->permission1->method('add_quotation','create')->access()){ ?>
+                    <li class="treeview <?php if ($this->uri->segment('1') == ("in_house_processed_material")){
+                        echo "active";
+                    } else {
+                        echo " ";
+                    }?>"><a href="<?php echo base_url('in_house_processed_material') ?>"><?php echo display('in_house_material') ?></a></li>
+                <?php }?>
+                <?php if($this->permission1->method('manage_quotation','read')->access()){ ?>
+                    <li class="treeview <?php if ($this->uri->segment('1') == ("outsource_processed_material")){
+                        echo "active";
+                    } else {
+                        echo " ";
+                    }?>"><a href="<?php echo base_url('outsource_processed_material') ?>"><?php echo display('outsource_processed_material') ?></a></li>
+                <?php } ?>
+
+                </ul>
+            </li>
+        <?php }?>
+            <!-- Processed Menu end -->
         
 
       <!-- Stock menu start -->
